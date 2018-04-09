@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        Hello World · fi3ework&#39;s Studio
+        fi3ework&#39;s Studio
         
     </title>
     <link rel="icon" href= /favicon.ico>
@@ -83,7 +83,7 @@
                 <a href="/" >fi3ework&#39;s Studio.</a>
             </div>
             <div class="post-banner">
-                <span class="post-name">Hello World</span>
+                <span class="post-name"></span>
             </div>
         </div>
     </div>
@@ -107,7 +107,7 @@
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Hello World
+            [Untitled Post]
             <!-- 404 -->
             
         </h1>
@@ -125,12 +125,12 @@
             
             <div class="post-intro-meta">
                 <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                <span class="post-intro-time">2017/08/14</span>
+                <span class="post-intro-time">2018/04/09</span>
             </div>
             <!-- 
 
 <div class="post-share iconfont-archer">
-    <ul class="share-box" data-href = "/2017/08/14/hello-world/" data-title = "Hello World" >
+    <ul class="share-box" data-href = "/2018/04/09/Vue 内部指令/" data-title = "" >
         <li class="to-weibo">分享到微博</li>
         <li class="to-wechat">分享到微信</li>
         <li class="to-qq">分享到QQ</li>
@@ -148,32 +148,36 @@
     <div class="QRcode-close">×</div>
 </div>
     <article class="article-entry">
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h2 id="Vue-内部指令"><a href="#Vue-内部指令" class="headerlink" title="Vue 内部指令"></a>Vue 内部指令</h2><h4 id="v-if-v-else-v-show-指令"><a href="#v-if-v-else-v-show-指令" class="headerlink" title="v-if v-else v-show 指令"></a>v-if v-else v-show 指令</h4><p>v-if 用来判断是否加载html的DOM，比如常用到的用户登录状态、权限管理、页面加载等<br>v-else 紧跟在v-if后面，表示v-if条件不成立时执行</p>
+<h5 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h5><p>v-if=”判断表达式”</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;div v-if=&quot;isLogin&quot;&gt;您好，JM浅蓝&lt;/div&gt;</div><div class="line">&lt;div v-else&gt;请登录&lt;/div&gt;</div></pre></td></tr></table></figure>
+<p>v-show DOM元素的隐藏和显示，调整的是css的display属性</p>
+<h5 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h5><p>v-show=”判断表达式”</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;div v-show=&quot;isShow&quot;&gt; &lt;/div&gt;</div></pre></td></tr></table></figure>
+<h6 id="v-if和v-show的区别"><a href="#v-if和v-show的区别" class="headerlink" title="v-if和v-show的区别"></a>v-if和v-show的区别</h6><p>v-if：判断是否加载，可以减轻服务器的压力，在需要的时候加载。<br>v-show：调整css display的属性，可以使客户端操作更加流畅。</p>
+<h4 id="v-for-指令"><a href="#v-for-指令" class="headerlink" title="v-for 指令"></a>v-for 指令</h4><p>v-for指令是循环渲染一组data中的数组，v-for指令需要以item in items形式的特殊语法，items是源数据数组并且item是数组元素迭代的别名。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;li v-for=&quot;item in items&quot;&gt;</div><div class="line">     &#123;&#123;item&#125;&#125;</div><div class="line">&lt;/li&gt;</div></pre></td></tr></table></figure>
+<h4 id="v-text-和-v-html"><a href="#v-text-和-v-html" class="headerlink" title="v-text 和 v-html"></a>v-text 和 v-html</h4><p>v-text 在html页面输出data的值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;p v-text=&quot;message&quot;&gt;&lt;/p&gt;</div></pre></td></tr></table></figure>
+<p>v-html 当javascript有html标签时，v-text无法输出，使用v-html输出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;p v-html=&quot;vueHtml&quot;&gt;&lt;/p&gt;</div></pre></td></tr></table></figure>
+<h4 id="v-on-绑定事件监听器"><a href="#v-on-绑定事件监听器" class="headerlink" title="v-on 绑定事件监听器"></a>v-on 绑定事件监听器</h4><p>v-on 就是监听事件，可以用v-on指令监听DOM事件来触发一些javascript代码，v-on的缩写形式是@</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;button v-on:click=&quot;add&quot;&gt;&lt;/button&gt;</div><div class="line">&lt;button @click=&quot;reduce&quot;&gt;&lt;/button&gt;</div></pre></td></tr></table></figure>
+<h4 id="v-model-双向数据绑定"><a href="#v-model-双向数据绑定" class="headerlink" title="v-model 双向数据绑定"></a>v-model 双向数据绑定</h4><p>v-model 这个指令只能用在<input>、<select>、 </select><textarea>这些表单元素上，所谓双向绑定，指的是我们在vue实例中的data与其渲染的DOM元素上的内容一致，两者有一方值被改变，另外一方也会随之更新。</textarea></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;app&quot;&gt;</div><div class="line">    &lt;p&gt;js定义的message原文本：&#123;&#123;message&#125;&#125;&lt;/p&gt;</div><div class="line">    &lt;h3&gt;文本框&lt;/h3&gt;</div><div class="line">    &lt;p&gt;双向绑定的文本：&lt;input type=&quot;text&quot; v-model=&quot;message&quot;&gt;&lt;/p&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<h6 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a>修饰符</h6><p>.lazy:取代input监听change事件，当值改变的时候随之改变。<br>.number:输入的数字随之改变<br>.trim: 去掉输入框的首尾空格 </p>
+<h4 id="v-bind"><a href="#v-bind" class="headerlink" title="v-bind"></a>v-bind</h4><p>v-bind:处理html标签的内部属性 例如对a标签的href属性动态赋值,还用来绑定标签的css样式，缩写形式为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;a v-bind:href=&quot;vueURL&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a :href=&quot;vueURL&quot;&gt;&lt;/a&gt;</div></pre></td></tr></table></figure></p>
+<h4 id="v-pre-v-cloak-v-once"><a href="#v-pre-v-cloak-v-once" class="headerlink" title="v-pre v-cloak v-once"></a>v-pre v-cloak v-once</h4><p>v-pre: 不输出Vue实例中的data值 不被Vue编译直接打印原数据如<br>v-cloak:渲染完指定的DOM之后才显示，和css样式一起使用<br>v-once：只渲染一次 渲染后的值静态输出 不再改变</p>
 
     </article>
     <!-- 前后页  -->
     <ul class="post-pager">
         
-            <li class="previous">
-                <a href= "/2018/04/09/Vue 内部指令/" title=  >
-                    <span>Previous Post</span>
-                    <span>[Untitled Post]</span>
-                </a>
-            </li>
-        
         
             <li class="next">
-                <a href= "/2016/04/06/（url中显示的标题）/" title= name >
+                <a href= "/2017/08/14/hello-world/" title= Hello World >
                     <span>Next Post</span>
-                    <span>name</span>
+                    <span>Hello World</span>
                 </a>
             </li>
         
